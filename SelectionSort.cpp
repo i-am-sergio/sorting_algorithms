@@ -4,8 +4,7 @@
 #include <algorithm>
 #include "Utilidades.h"
 
-void SelectionSort(std::vector<int>& A){
-    int n = A.size();
+void SelectionSort(std::vector<int>& A, int n){
     int indiceMin; // Indice del elemento minimo
 
     // Iterar en la submatriz no ordenada
@@ -24,14 +23,14 @@ void SelectionSort(std::vector<int>& A){
 
 void ShowInTerminal(std::vector<int>& vector){
     std::cout<<vector<<"\n";
-    SelectionSort(vector);
+    SelectionSort(vector, vector.size());
     std::cout<<vector<<"\n";
 }
 void ShowInFile(std::vector<int>& vector){
     std::ofstream archivo("output.txt");
     if (archivo.is_open()) {
         archivo << vector << "\n\n";
-        SelectionSort(vector);
+        SelectionSort(vector, vector.size());
         archivo << vector;
         archivo.close();
         std::cout << "La salida se ha guardado en 'output.txt'...\n";
