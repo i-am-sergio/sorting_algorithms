@@ -2,7 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <algorithm>
-
+#include "Utilidades.h"
 
 void BubbleSort(std::vector<int>& A){
     int n = A.size();
@@ -20,16 +20,6 @@ void BubbleSort(std::vector<int>& A){
     }    
 }
 
-void PrintVector(const std::vector<int>& A, std::ostream& os = std::cout){
-    for(int i=0; i<A.size(); i++)
-        os << A[i] <<" ";
-}
-
-std::ostream& operator<<(std::ostream& os, const std::vector<int>& A) {
-    PrintVector(A, os);
-    return os;
-}
-
 void ShowInTerminal(std::vector<int>& vector){
     std::cout<<vector<<"\n";
     BubbleSort(vector);
@@ -42,9 +32,9 @@ void ShowInFile(std::vector<int>& vector){
         BubbleSort(vector);
         archivo << vector;
         archivo.close();
-        std::cout << "La salida se ha guardado en 'output.txt'.\n";
+        std::cout << "La salida se ha guardado en 'output.txt'...\n";
     } else {
-        std::cerr << "No se pudo abrir el archivo para escribir.\n";
+        std::cerr << "No se pudo abrir el archivo para escribir\n";
     }
 
 }
