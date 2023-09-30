@@ -24,8 +24,7 @@ void heapify(std::vector<int>& A, int n, int i)
 }
 
 
-void HeapSort(std::vector<int>& A){
-    int n = A.size();
+void HeapSort(std::vector<int>& A, int n){
     // Construir un heap (reorganizar el vector)
     for (int i = n / 2 - 1; i >= 0; i--)
         heapify(A, n, i);
@@ -39,14 +38,14 @@ void HeapSort(std::vector<int>& A){
 
 void ShowInTerminal(std::vector<int>& vector){
     std::cout<<vector<<"\n";
-    HeapSort(vector);
+    HeapSort(vector, vector.size());
     std::cout<<vector<<"\n";
 }
 void ShowInFile(std::vector<int>& vector){
     std::ofstream archivo("output.txt");
     if (archivo.is_open()) {
         archivo << vector << "\n\n";
-        HeapSort(vector);
+        HeapSort(vector, vector.size());
         archivo << vector;
         archivo.close();
         std::cout << "Se ha guardado en 'output.txt'...\n";
