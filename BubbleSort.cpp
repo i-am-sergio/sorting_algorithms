@@ -6,16 +6,16 @@
 
 void BubbleSort(std::vector<int>& A){
     int n = A.size();
-    bool swapped;
-    for (int i = 0; i < n - 1; i++) {
-        swapped = false;
-        for (int j = 0; j < n - i - 1; j++) {
+    bool intercambio; // swap
+    for (int i = 0; i < n-1; i++) {
+        intercambio = false;
+        for (int j = 0; j < n-i-1; j++) {
             if (A[j] > A[j + 1]) {
                 std::swap(A[j], A[j + 1]);
-                swapped = true;
+                intercambio = true;
             }
         }
-        if (swapped == false)
+        if (intercambio == false)
             break;
     }    
 }
