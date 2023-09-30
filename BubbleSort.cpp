@@ -4,8 +4,7 @@
 #include <algorithm>
 #include "Utilidades.h"
 
-void BubbleSort(std::vector<int>& A){
-    int n = A.size();
+void BubbleSort(std::vector<int>& A, int n){
     bool intercambio; // swap
     for (int i = 0; i < n-1; i++) {
         intercambio = false;
@@ -22,14 +21,14 @@ void BubbleSort(std::vector<int>& A){
 
 void ShowInTerminal(std::vector<int>& vector){
     std::cout<<vector<<"\n";
-    BubbleSort(vector);
+    BubbleSort(vector, vector.size());
     std::cout<<vector<<"\n";
 }
 void ShowInFile(std::vector<int>& vector){
     std::ofstream archivo("output.txt");
     if (archivo.is_open()) {
         archivo << vector << "\n\n";
-        BubbleSort(vector);
+        BubbleSort(vector, vector.size());
         archivo << vector;
         archivo.close();
         std::cout << "La salida se ha guardado en 'output.txt'...\n";
