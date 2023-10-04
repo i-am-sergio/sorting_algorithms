@@ -6,16 +6,15 @@
 
 void SelectionSort(std::vector<int>& A, int n){
     int indiceMin; // Indice del elemento minimo
-
     // Iterar en la submatriz no ordenada
     for (int i = 0; i < n - 1; i++) {
         // Encontrar el elemento mínimo en la submatriz no ordenada
-        indiceMin = i; // Suponemos que el elemento actual es el mínimo
+        indiceMin = i; // Suponemos que el elemento actual es el minimo
         for (int j = i + 1; j < n; j++) {
-            if (A[j] < A[indiceMin])
-                indiceMin = j; // Actualizar el indice del minimo si encontramos un elemento menor
+            if (A[j] < A[indiceMin]) // si encontramos un elemento menor
+                indiceMin = j; // Actualizar el indice del minimo 
         }
-        // Intercambiar el elemento minimo encontrado con el primer elemento no ordenado
+        // Intercambiamos el menor encontrado con el 1er elemento no ordenado
         if (indiceMin != i)
             std::swap(A[indiceMin], A[i]);
     }

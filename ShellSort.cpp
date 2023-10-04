@@ -4,26 +4,25 @@
 #include <algorithm>
 #include "Utilidades.h"
 
-void ShellSort(std::vector<int>& A, int n){
-    // Comenzar con un espacio grande, luego ir reduciendo el espacio
-    for (int gap = n / 2; gap > 0; gap /= 2)
-    {
-        // Realizar una ordenación por inserción con espaciado para este tamaño de espacio.
-        // Los primeros elementos gap a[0..gap-1] ya están en orden con espaciado.
-        // Agregar un elemento más hasta que todo A esté ordenado con espaciado.
-        for (int i = gap; i < n; i += 1)
-        {
-            // Agregar A[i] a los elementos que ya han sido ordenados con espaciado
-            // Guardar A[i] en temp y crear un hueco en la posición i
+void ShellSort(std::vector<int>& A, int n) {
+    // El gap (esapciado) se refiere al espacio entre los elementos que se comparan
+    // Iniciar con un espacio grande, reduciendo progresivamente el espacio
+    for (int gap = n / 2; gap > 0; gap /= 2) {
+        // Realizar una ordenación por inserción con espaciado
+        // Los primeros elementos, A[0] hasta A[gap-1], 
+        // ya están en orden con el espaciado actual.
+        // Agregar un elemento hasta que todo el array esté ordenado con el gap actual
+        for (int i = gap; i < n; i += 1) {
+            // Agregar A[i] a los elementos que ya han sido ordenados con el gap actual.
+            // Guardar A[i] en temp y crear un hueco en la posición i.
             int temp = A[i];
-
-            // Desplazar hacia arriba los elementos previamente ordenados con espaciado
-            // hasta encontrar la ubicación correcta para A[i]
+            // Desplazar hacia arriba los elementos previamente ordenados con el gap actual
+            // hasta encontrar la ubicación correcta para A[i].
             int j;
             for (j = i; j >= gap && A[j - gap] > temp; j -= gap)
                 A[j] = A[j - gap];
 
-            // Poner temp (el valor original de A[i]) en su ubicación correcta
+            // Colocar temp en su ubicación correcta
             A[j] = temp;
         }
     }

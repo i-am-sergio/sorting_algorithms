@@ -4,19 +4,28 @@
 #include <algorithm>
 #include "Utilidades.h"
 
+// Función auxiliar para fusionar dos subarray ordenados
+// - myArray: el array original que se está ordenando
+// - inicio: indice de inicio del subarray izquierdo
+// - medio: indice final del subarray izquierdo, medio+1 indica el inicio del subarray derecho
+// - fin: indice final del subarray derecho
 void Merge(std::vector<int>& myArray, int inicio, int medio, int fin) {
+    // Calcular tamaños de los subarray
     int sizeIzq = medio - inicio + 1;
     int sizeDer = fin - medio;
     int* subArrayIzq = new int[sizeIzq];
     int* subArrayDer = new int[sizeDer];
     
+    // Copiar datos a los subarrays temporales
     for (int i = 0; i < sizeIzq; i++)
         subArrayIzq[i] = myArray[inicio + i];
     for (int j = 0; j < sizeDer; j++)
         subArrayDer[j] = myArray[medio + 1 + j];
 
+    // Inicializar indices para los subarray y el array principal
     int i = 0, j = 0, k = inicio;
     
+    // Fusionar los dos subarray en el array principal
     while (i < sizeIzq && j < sizeDer) {
         if (subArrayIzq[i] <= subArrayDer[j]) {
             myArray[k] = subArrayIzq[i];
@@ -27,29 +36,28 @@ void Merge(std::vector<int>& myArray, int inicio, int medio, int fin) {
         }
         k++;
     }
-    
-    while (i < sizeIzq) { // Copia los elementos restantes del subArrayIzq
+    // Copiar los elementos restantes del subarray izquierdo (si los hay)
+    while (i < sizeIzq) {
         myArray[k] = subArrayIzq[i];
         i++; 
         k++;
     }
-    
-    while (j < sizeDer) { // Copia los elementos restantes del subArrayDer
+    // Copiar los elementos restantes del subarray derecho (si los hay)
+    while (j < sizeDer) {
         myArray[k] = subArrayDer[j];
         j++; 
         k++;
     }
-    
+    // Liberar memoria de los subarrays temporales
     delete[] subArrayIzq;
     delete[] subArrayDer;
 }
 
-
 void MyMergeSort(std::vector<int>& A, int inicio, int fin){
     if(inicio < fin){
         int medio = (inicio + fin) / 2; // Dividimos por la mitad
-        MyMergeSort(A, inicio, medio);
-        MyMergeSort(A, medio+1, fin);
+        MyMergeSort(A, inicio, medio); // mitad izquierda 
+        MyMergeSort(A, medio+1, fin); // mitad derecha
         Merge(A,inicio,medio,fin); // Mezcla las partes ordenadas
     }
 }

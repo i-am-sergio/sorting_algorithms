@@ -4,33 +4,33 @@
 #include <algorithm>
 #include "Utilidades.h"
 
-int partition(std::vector<int>& A, int low, int high) {
-    int pivot = A[high]; // Elegir el pivote
+int particion(std::vector<int>& A, int bajo, int alto) {
+    int pivot = A[alto]; // Elegir el pivote
     // Índice del elemento más pequeño y que indica
     // la posición correcta del pivote encontrada hasta ele momento
-    int i = (low - 1);
+    int i = (bajo - 1);
 
-    for (int j = low; j <= high - 1; j++) {
+    for (int j = bajo; j <= alto - 1; j++) {
         // Si el elemento actual es menor que el pivote
         if (A[j] < pivot) {
-            // Incrementar el índice del elemento más pequeño
+            // Se incrementa el indice del elemento más pequeño
             i++;
             std::swap(A[i], A[j]);
         }
     }
 
-    std::swap(A[i + 1], A[high]);
+    std::swap(A[i + 1], A[alto]);
     return (i + 1);
 }
  
-void MyQuickSort(std::vector<int>& A, int low, int high)
+void MyQuickSort(std::vector<int>& A, int bajo, int alto)
 {
-    if (low < high) {
+    if (bajo < alto) {
         // pi es el índice de partición, A[p] está ahora en el lugar correcto
-        int pi = partition(A, low, high);
+        int pivote = particion(A, bajo, alto);
         // Ordenar por separado los elementos antes y despues de la particion
-        MyQuickSort(A, low, pi - 1);
-        MyQuickSort(A, pi + 1, high);
+        MyQuickSort(A, bajo, pivote - 1);
+        MyQuickSort(A, pivote + 1, alto);
     }
 }
  
