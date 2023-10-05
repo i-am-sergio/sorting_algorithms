@@ -1,15 +1,16 @@
 # Algoritmos de Ordenamiento (Sorting algorithms)
 
-1. **Bubble Sort:**
+1. ## **Bubble Sort:**
+
 
    - _Características Principales:_
      - Es uno de los algoritmos más sencillos.
      - Itera sobre la lista varias veces, comparando elementos adyacentes y realizando intercambios si es necesario.
      - Tiene una complejidad de tiempo cuadrática O(n^2) en el peor caso.
      - No es eficiente para listas grandes.
-     Comparación de Elementos Adyacentes:
+
     - _Funcionamiento del Algoritmo:_
-        - Comienza comparando el primer elemento con el segundo, luego el segundo con el tercero, y así sucesivamente. Compara elementos adyacentes de la lista.
+        - Comparación de Elementos Adyacentes: Comienza comparando el primer elemento con el segundo, luego el segundo con el tercero, y así sucesivamente. Compara elementos adyacentes de la lista.
         - Intercambio si es Necesario: Si el elemento actual es mayor que el siguiente (en el caso de orden ascendente), se intercambian. Este proceso se repite para cada par de elementos adyacentes en la lista.
         - Una Pasada Completa: Una vez completada la primera pasada, el elemento más grande estará en la última posición de la lista no ordenada. En cada pasada, el siguiente elemento más grande se coloca en su posición correcta.
         - Iteración Hasta la Ordenación Completa: El proceso se repite para todas las pasadas necesarias hasta que toda la lista esté ordenada. En cada pasada, el algoritmo compara y coloca el elemento más grande de la parte no ordenada en su posición correcta.
@@ -22,7 +23,7 @@
     <img src="img/bubblesort.png" width="600">
     </p>
 
-2. **Heap Sort:**
+2. ## **Heap Sort:**
 
    - _Características Principales:_
      - Utiliza una estructura de datos llamada heap (montículo) para organizar los elementos.
@@ -45,7 +46,7 @@
     <img src="img/heapsort.png" width="600">
     </p>
 
-3. **Insertion Sort:**
+3. ## **Insertion Sort:**
 
    - _Características Principales:_
      - Es eficiente para listas pequeñas o parcialmente ordenadas.
@@ -71,7 +72,7 @@
     </p>
     
 
-4. **Selection Sort:**
+4. ## **Selection Sort:**
 
    - _Características Principales:_
      - Encuentra el elemento mínimo en cada iteración y lo intercambia con el primer elemento no ordenado.
@@ -94,7 +95,7 @@
     </p>
     
 
-5. **Shell Sort:**
+5. ## **Shell Sort:**
     También conocido como el método de ordenación por incrementos decrecientes, es una variante mejorada del algoritmo de inserción.
    - _Características Principales:_
      - Mejora el rendimiento de Insertion Sort al comparar y intercambiar elementos a intervalos más grandes.
@@ -114,7 +115,7 @@
     <img src="img/shellsort.jpg" width="600">
     </p>
 
-6. **Merge Sort:**
+6. ## **Merge Sort:**
 
    - _Características Principales_
 
@@ -150,7 +151,7 @@
     </p>
     
 
-7. **Quick Sort:**
+7. ## **Quick Sort:**
    - _Características Principales_
 
      - También utiliza el enfoque de dividir y conquistar.
