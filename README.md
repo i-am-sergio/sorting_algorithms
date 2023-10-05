@@ -18,6 +18,9 @@
     - _Complejidad_
 
         La complejidad de tiempo en el peor caso de Bubble Sort es O(n^2), donde "n" es la longitud de la lista. Esto lo hace ineficiente para listas grandes, y generalmente se prefiere para propósitos educativos.
+    <p align="center">
+    <img src="img/bubblesort.png" width="600">
+    </p>
 
 2. **Heap Sort:**
 
@@ -37,6 +40,10 @@
     - _Complejidad_
 
         La complejidad de tiempo de Heap Sort es O(n log n) en el peor caso. La fase de construcción del heap tiene una complejidad de tiempo O(n), y el proceso de extracción de elementos se repite n veces, cada vez con una complejidad logarítmica debido a las operaciones de max-heapify. Esto hace que Heap Sort sea eficiente para listas grandes.
+
+    <p align="center">
+    <img src="img/heapsort.png" width="600">
+    </p>
 
 3. **Insertion Sort:**
 
@@ -59,6 +66,11 @@
 
         La complejidad de tiempo de Insertion Sort es O(n^2) en el peor caso, donde "n" es el tamaño de la lista. Es eficiente para listas pequeñas o parcialmente ordenadas, pero puede volverse ineficiente para listas grandes. Sin embargo, su complejidad en el mejor caso es O(n), lo que lo hace eficiente para listas casi ordenadas.
 
+    <p align="center">
+    <img src="img/insertionsort.png" width="600">
+    </p>
+    
+
 4. **Selection Sort:**
 
    - _Características Principales:_
@@ -77,6 +89,10 @@
         La complejidad de tiempo de Selection Sort es O(n^2) en el peor caso, donde "n" es la longitud de la lista. Es ineficiente para listas grandes, pero su implementación simple puede ser útil en situaciones con recursos limitados o para listas pequeñas. 
         También es inestable ya que no preserva el orden relativo de elementos iguales
 
+    <p align="center">
+    <img src="img/selectionsort.png" width="600">
+    </p>
+    
 
 5. **Shell Sort:**
     También conocido como el método de ordenación por incrementos decrecientes, es una variante mejorada del algoritmo de inserción.
@@ -93,6 +109,10 @@
     - _Complejidad_
 
         La complejidad de tiempo de Shell Sort depende de la secuencia de brechas seleccionada. La elección de una buena secuencia puede resultar en un rendimiento bastante eficiente. En el peor caso, la complejidad de tiempo es O(n^2), pero en muchos casos prácticos, Shell Sort supera a otros algoritmos cuadráticos, como Insertion Sort y Selection Sort.
+    
+    <p align="center">
+    <img src="img/shellsort.jpg" width="600">
+    </p>
 
 6. **Merge Sort:**
 
@@ -125,6 +145,11 @@
 
         La complejidad de tiempo de Merge Sort es O(n log n) en todos los casos. La fase de fusión contribuye con la mayor parte de la complejidad, y la recursión asegura que cada elemento sea tratado logarítmicamente muchas veces.
 
+    <p align="center">
+    <img src="img/mergesort.png" width="600">
+    </p>
+    
+
 7. **Quick Sort:**
    - _Características Principales_
 
@@ -153,3 +178,7 @@
     - _Complejidad_
 
         La elección eficiente del pivote permite que Quick Sort tenga una complejidad de tiempo promedio de O(n log n). Sin embargo, en el peor caso (siempre que se elija un pivote desfavorable), la complejidad puede ser O(n^2).
+
+    <p align="center" style="background-color: white;">
+    <img src="img/quicksort.png" width="600">
+    </p>
