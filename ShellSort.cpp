@@ -5,7 +5,7 @@
 #include "Utilidades.h"
 
 void ShellSort(std::vector<int>& A, int n) {
-    // El gap (esapciado) se refiere al espacio entre los elementos que se comparan
+    // El gap (espaciado) se refiere al espacio entre los elementos que se comparan
     // Iniciar con un espacio grande, reduciendo progresivamente el espacio
     for (int gap = n / 2; gap > 0; gap /= 2) {
         // Realizar una ordenación por inserción con espaciado
