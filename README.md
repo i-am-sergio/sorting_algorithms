@@ -15,17 +15,6 @@
         - Iteración Hasta la Ordenación Completa: El proceso se repite para todas las pasadas necesarias hasta que toda la lista esté ordenada. En cada pasada, el algoritmo compara y coloca el elemento más grande de la parte no ordenada en su posición correcta.
         - Optimización: Una optimización común es detener el algoritmo si en una pasada completa no se realiza ningún intercambio. Esto significa que la lista ya está ordenada, y no es necesario continuar con más pasadas.
         
-        - Ejemplo:
-            Supongamos la siguiente lista de números para ordenar de menor a mayor: [4, 2, 7, 1, 9].
-            Primera Pasada:
-            Comparación: [2, 4, 1, 7, 9] (intercambio de 2 y 4).
-            Comparación: [2, 1, 4, 7, 9] (intercambio de 4 y 1).
-            Comparación: [2, 1, 4, 7, 9] (sin intercambio).
-            Comparación: [2, 1, 4, 7, 9] (sin intercambio).
-            Segunda Pasada:
-            Comparación: [1, 2, 4, 7, 9] (intercambio de 2 y 1).
-            Comparación: [1, 2, 4, 7, 9] (sin intercambio).
-            Comparación: [1, 2, 4, 7, 9] (sin intercambio).
     - _Complejidad_
 
         La complejidad de tiempo en el peor caso de Bubble Sort es O(n^2), donde "n" es la longitud de la lista. Esto lo hace ineficiente para listas grandes, y generalmente se prefiere para propósitos educativos.
@@ -108,7 +97,7 @@
 6. **Merge Sort:**
 
    - _Características Principales_
-   
+
      - Utiliza el enfoque de dividir y conquistar.
      - Divide la lista en mitades, ordena cada mitad y luego fusiona las mitades ordenadas.
      - Es eficiente y tiene una complejidad de tiempo O(n log n) en todos los casos.
