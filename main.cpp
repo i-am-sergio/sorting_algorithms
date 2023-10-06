@@ -64,7 +64,7 @@ void escribirDatos(string nombreArchivo,vector<int> cantidadNums,vector<int>nums
     file.open(nombreArchivo);
     
     //BubbleSort
-    cout<<"Llego";
+    cout<<"Calculando los tiempos de ejecucion de los algoritmos";
     for(int i : cantidadNums){
        double aux = ejecutarFuncion(BubbleSort,nums,i); 
        file<<aux<<" ";
